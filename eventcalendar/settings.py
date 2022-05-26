@@ -101,9 +101,9 @@ AUTH_USER_MODEL = "accounts.User"
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = 'zh-hant'
 
-TIME_ZONE = "UTC"
+TIME_ZONE = 'Asia/Taipei'
 
 USE_I18N = True
 
@@ -118,3 +118,4 @@ USE_TZ = False
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*.jp.ngrok.io']
