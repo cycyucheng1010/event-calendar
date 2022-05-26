@@ -137,7 +137,7 @@ SITE_ID = 2
 
 SOCIALACCOUNT_PROVIDERS ={
     'line':{
-        'scope':[
+        'SCOPE':[
             'profile',
             'openid',
             'email',
