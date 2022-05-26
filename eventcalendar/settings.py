@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from telnetlib import AUTHENTICATION
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +40,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "calendarapp.apps.CalendarappConfig",
     "accounts.apps.AccountsConfig",
+    #allauth for line login
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.line'
 ]
 
 MIDDLEWARE = [
@@ -119,3 +125,22 @@ STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*.jp.ngrok.io']
+
+
+#line login setting
+AUTHENTICATION_BACKEND = (
+    'django.contrib.auth.backend.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 2
+
+SOCIALACCOUNT_PROVIDERS ={
+    'line':{
+        'scope':[
+            'profile',
+            'openid',
+            'email',
+        ]
+    }
+}

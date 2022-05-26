@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	{% load static %}
+    {% load socialaccount %}
     <head>
         <title>Sign In | Event Calendar</title>
         <meta charset="utf-8" />
@@ -29,14 +30,14 @@
                                     <div class="col-lg-9">
                                         <div class="social-wrap">
                                             <h3 class="mb-3 text-center">Signin with this services</h3>
-                                            <p class="social-media d-flex justify-content-center">
-                                                <a href="#" class="social-icon google d-flex align-items-center justify-content-center"><span class="fa fa-google"></span></a>
+                                            <!--<p class="social-media d-flex justify-content-center">
+                                                <<a href="#" class="social-icon google d-flex align-items-center justify-content-center"><span class="fa fa-google"></span></a>
                                                 <a href="#" class="social-icon facebook d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
                                                 <a href="#" class="social-icon twitter d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
                                             </p>
                                             <p class="or">
                                                 <span>or</span>
-                                            </p>
+                                            </p>-->
                                         </div>
                                         <form action="#" method="post" class="signup-form">
                                             {% csrf_token %}
@@ -56,6 +57,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <button type="submit" class="btn btn-primary">Sign In</button>
+                                                        <a class="btn btn-danger" href="{% provider_login_url 'line' method='oauth2' %}">Line 登入</a>
                                                     </div>
                                                 </div>
                                             </div>
