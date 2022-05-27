@@ -138,8 +138,8 @@ SITE_ID = 2
 SOCIALACCOUNT_PROVIDERS = {
           'line': {
               'APP': {
-                  'client_id': 'LINE_LOGIN_CHANNEL_ID',
-                  'secret': 'LINE_LOGIN_CHANNEL_SECRET'
+                  'client_id': '1657152198',
+                  'secret': 'c27e1c6fdc361607383f37c4b1b68cdf'
               },
               "SCOPE": ['profile', 'openid', 'email']
           }
