@@ -40,10 +40,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "calendarapp.apps.CalendarappConfig",
     "accounts.apps.AccountsConfig",
-    #allauth for line login
+    #allauth 
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    # line provider 
     'allauth.socialaccount.providers.line'
 ]
 
@@ -144,3 +146,5 @@ SOCIALACCOUNT_PROVIDERS = {
               "SCOPE": ['profile', 'openid', 'email']
           }
       }
+
+LOGIN_REDIRECT_URL = '/'
