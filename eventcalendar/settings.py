@@ -135,12 +135,12 @@ AUTHENTICATION_BACKEND = (
 
 SITE_ID = 2
 
-SOCIALACCOUNT_PROVIDERS ={
-    'line':{
-        'SCOPE':[
-            'profile',
-            'openid',
-            'email',
-        ]
-    }
-}
+SOCIALACCOUNT_PROVIDERS = {
+          'line': {
+              'APP': {
+                  'client_id': 'LINE_LOGIN_CHANNEL_ID',
+                  'secret': 'LINE_LOGIN_CHANNEL_SECRET'
+              },
+              "SCOPE": ['profile', 'openid', 'email']
+          }
+      }
