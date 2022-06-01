@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include ,re_path
 
 from .views import DashboardView
-
+from LineBot import views
 
 urlpatterns = [
     path("", DashboardView.as_view(), name="dashboard"),
@@ -26,5 +26,5 @@ urlpatterns = [
     path("", include("calendarapp.urls")),
     #line login
     path('accounts/',include('allauth.urls')),
-    path('',include('LineBot.urls')),
+    re_path('^callback',views.callback),
 ]
