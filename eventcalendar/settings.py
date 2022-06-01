@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # line provider 
     'allauth.socialaccount.providers.line',
+    'LineBot'
 ]
 
 MIDDLEWARE = [
@@ -148,3 +149,8 @@ SOCIALACCOUNT_PROVIDERS = {
       }
 
 # LOGIN_REDIRECT_URL = '/calendar/'
+LINE_CHANNEL_ACCESS_TOKEN = 'o4pPo44PZkj7z8TCZbo3CDBTWPrSx8Ls+PJrovx7SBZMmpBp0hTInlK5Q8i4UPjAAbg24RRA6Am46GFAKJ42kGeNtcsPMKdVBFo1Bz/YJyNZwiEQn3vzgWhOq56TR7en6PeFVctJMKwKUOjLjndtdAdB04t89/1O/w1cDnyilFU='
+LINE_CHANNEL_SECRET = 'd1cee8bb03b7b550fd2eccdafb1e55c6'
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*.jp.ngrok.io']
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
